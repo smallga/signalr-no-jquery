@@ -79,6 +79,7 @@ var ajax = function ajax(options) {
 
   request.open(options.type, options.url);
   request.setRequestHeader('content-type', options.contentType);
+  request.setRequestHeader('AccessToken', options.accessToken);
 
   request.send(options.data.data && 'data=' + options.data.data);
 
