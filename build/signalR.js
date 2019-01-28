@@ -410,6 +410,8 @@ var jQueryShim = require('./jQueryShim');
         ajaxDataType: "text",
 
         contentType: "application/json; charset=UTF-8",
+        
+        accessToken: "",
 
         logging: false,
 
@@ -1169,7 +1171,8 @@ var jQueryShim = require('./jQueryShim');
                 data: {},
                 xhrFields: { withCredentials: connection.withCredentials },
                 contentType: connection.contentType,
-                dataType: connection.ajaxDataType
+                dataType: connection.ajaxDataType,
+                accessToken: connection.accessToken
             }, options));
         },
 
